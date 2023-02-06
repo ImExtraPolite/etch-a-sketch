@@ -1,0 +1,16 @@
+body {
+  width: 100%;
+  text-align: center;
+}
+
+#container {
+  max-width: 50%;
+  display: flex;
+}
+
+#container div {
+  padding: 20px;
+  max-width: 0;
+  border: solid;
+}
+
