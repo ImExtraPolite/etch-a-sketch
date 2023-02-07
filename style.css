@@ -1,16 +1,14 @@
-body {
-  width: 100%;
-  text-align: center;
-}
-
-#container {
-  max-width: 50%;
+#container div {
   display: flex;
 }
 
-#container div {
+.row1 div, .row2 div{
   padding: 20px;
-  max-width: 0;
   border: solid;
 }
+
+
+
+
+
 
