@@ -1,11 +1,10 @@
 #container div {
-  display: flex;
-}
-
-.row1 div, .row2 div{
+  max-width: 0;
   padding: 20px;
+  display: flex;
   border: solid;
 }
+
 
 
 
