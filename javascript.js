@@ -27,14 +27,20 @@ rows();
 
 for(let i = 1; i <= 16; i++) {
   i.toString;
-  const rowOne = document.querySelector(".row" + i);
-  rowOne.style.padding = 0;
-  rowOne.style.margin = 0;
+  const rowOld = document.querySelector(".row" + i);
+  const rowNew = document.querySelector(".row" + i + " div");
+  rowOld.style.padding = 0;
+  rowOld.style.margin = 0;
+
+  console.log(rowNew);
+
+  rowNew.addEventListener("click", () => {
+    rowNew.style.backgroundColor = "black";
+  });
 }
 
+// const change = document.querySelector("div");
 
-
-
-
-
-
+// change.addEventListener("click", () => {
+//   change.style.backgroundColor = "black";
+// });
