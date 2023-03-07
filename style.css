@@ -1,12 +1,16 @@
-#container div {
-  max-width: 0;
-  padding: 20px;
-  display: flex;
+body {
+  background-color: rgb(55,55,55);
 }
 
-/* #container div {
+#container div {
+  width: 0px;
+}
+
+/* .row1 div:hover {
   background-color: black;
 } */
+
+
 
 
 

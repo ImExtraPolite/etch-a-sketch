@@ -16,8 +16,7 @@ function rows() {
       j.toString;
       const columns = document.querySelector(".row" + i);
       const rows = document.createElement("div");
-      rows.style.border = "solid";
-      rows.classList.add("squares");
+      rows.classList.add("squares" + j);
 
       columns.appendChild(rows);
     }
@@ -25,22 +24,23 @@ function rows() {
 }
 rows();
 
-for(let i = 1; i <= 16; i++) {
-  i.toString;
-  const rowOld = document.querySelector(".row" + i);
-  const rowNew = document.querySelector(".row" + i + " div");
-  rowOld.style.padding = 0;
-  rowOld.style.margin = 0;
 
-  console.log(rowNew);
 
-  rowNew.addEventListener("click", () => {
-    rowNew.style.backgroundColor = "black";
-  });
+for (let i = 1; i <= 16; i++) {
+  // if ()
+  const column = document.querySelector(".squares" + i);
+
+  console.log(column);
+
+  column.addEventListener("click", () => {
+    column.style.backgroundColor = "black";
+  })
+
+  // for (let j = 1; j <= 16; j++) {
+  //   const row = document.querySelector(".squares" + j);
+
+  //   row.addEventListener("click", () => {
+  //     row.style.backgroundColor = "black";
+  //   })
+  // }
 }
-
-// const change = document.querySelector("div");
-
-// change.addEventListener("click", () => {
-//   change.style.backgroundColor = "black";
-// });
