@@ -1,14 +1,16 @@
-body {
-  background-color: rgb(55,55,55);
+#container {
+  width: 640px;
+  /* text-align: center; */
+  margin: auto;
+  border: solid black;
+
 }
 
 #container div {
   width: 0px;
 }
 
-/* .square1 {
-  display: inline-block;
-} */
+
 
 
 
