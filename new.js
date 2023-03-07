@@ -1,45 +1,51 @@
 function grid() {
-  for (let i = 1; i <= 16; i++) {
+  for (let i = 1; i <= 256; i++) {
     const container = document.querySelector("#container");
     const column = document.createElement("div");
-    column.classList.add("row" + i);
-    column.style.display = "flex";
+    column.classList.add("square" + i);
+    // column.style.display = "flex";
   
     container.appendChild(column);
   }
   
-  for (let j = 1; j <= 16; j++) {
-    const column = document.querySelector(".row" + j);
-  
-    for(let x = 1; x <= 16; x++) {
-      const row = document.createElement("div");
-      row.style.border = "solid black";
-      row.style.padding = "20px";
-  
-      column.appendChild(row);
-    }
-  }
 } 
 grid();
 
-for (let i = 1; i <= 16; i++) {
-  for (let j = 1; j <= 16; j++) {
-    const row = document.querySelector(".row" + j + " div");
-
+function user(first, second) {
+  for(let i = first; i <= second; i++) {
+    const row = document.querySelector(".square" + i);
+  
+    row.style.border = "solid black";
+    row.style.padding = "20px";
+    row.style.display = "inline-block";
+  
     row.addEventListener("click", () => {
       row.style.backgroundColor = "black";
     })
   }
-
 }
 
+let newNum;
+
+const container = document.querySelector("#container");
+const space = document.createElement("br");
 
 
+user(1, 16);
 
-// for(i = 1; i <= 16; i++) {
-//   const choice = document.querySelector(".choice");
+user(16,32);
 
-//   choice.addEventListener("click", () => {
-//     choice.style.backgroundColor = "black";
-//   });
+
+container.appendChild(space);
+
+
+// for(let i = 1; i <= 16; i++) {
+//   const row = document.querySelector(".square" + i);
+
+//   row.style.border = "solid black";
+//   row.style.padding = "20px";
+
+//   row.addEventListener("click", () => {
+//     row.style.backgroundColor = "black";
+//   })
 // }
