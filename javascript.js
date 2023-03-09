@@ -1,19 +1,20 @@
-function columns() {
-  for (let j = 1; j <= 16; j++) {
+function columns(user) {
+  for (let j = 1; j <= user; j++) {
+    let width = 40 * j;
     const container = document.querySelector("#container");
     const columns = document.createElement("div");
     columns.style.display = "flex";
     columns.classList.add("row" + j);
+    container.style.width = width + "px";
 
     container.appendChild(columns); 
   }
 }
-columns();
 
-function rows() {
-  for (let i = 1; i <= 16; i++) {
-    for(let j = 1; j <= 16; j++) {
-      j.toString;
+function rows(user) {
+  for (let i = 1; i <= user; i++) {
+    for(let j = 1; j <= user; j++) {
+      const container = document.querySelector("#container");
       const columns = document.querySelector(".row" + i);
       const rows = document.createElement("div");
       rows.classList.add("squares" + j);
@@ -21,10 +22,16 @@ function rows() {
 
       columns.appendChild(rows);
 
-      rows.addEventListener("click", () => {
+      rows.addEventListener("mouseover", () => {
         rows.style.backgroundColor = "black"
       })
     }
   }
 }
-rows();
+
+let user = Number(prompt("Enter a number: "));   
+
+columns(user);
+rows(user);
+
+

@@ -1,9 +1,12 @@
 #container {
   width: 640px;
-  /* text-align: center; */
   margin: auto;
   border: solid black;
+  padding: auto;
+}
 
+.top {
+  text-align: center;
 }
 
 #container div {
