@@ -29,9 +29,15 @@ function rows(user) {
   }
 }
 
-let user = Number(prompt("Enter a number: "));   
+function userNum() {
+  let user = Number(prompt("Enter a number: "));   
 
-columns(user);
-rows(user);
+  return user;
+}
+
+console.log(userNum());
+
+columns(userNum());
+rows(userNum());
 
 
