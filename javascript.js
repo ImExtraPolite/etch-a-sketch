@@ -35,8 +35,6 @@ function userNum() {
   return user;
 }
 
-console.log(userNum());
-
 columns(userNum());
 rows(userNum());
 
